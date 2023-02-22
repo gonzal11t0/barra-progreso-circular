@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(106, 29, 83);
+}
+.progressBar-container{
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+}
+.progressBar-container .outer-box{
+    border-radius: 50%;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.progressBar-container .outer-box .inner-box{
+    font-size:2rem;
+    width:160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progressBar-container svg{
+    position: absolute;
+}
+.progressBar-container circle{
+    fill:none;
+    stroke: url(#gradientColor);
+    stroke-width: 20px;
+    stroke-dasharray:550;
+    stroke-dashoffset:550;
+    animation: loading 15s linear forwards;
+}
+@keyframes loading {
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
